@@ -18,12 +18,17 @@ export default {
 
 // import { ref } from "vue";
 // import { defineComponent } from '@vue/composition-api'
+// import { Options } from "vue-class-component";
 
+// @Options({
+// 	name: "Home"
+// })
 // export default defineComponent({
 // 	setup() {
 // 		const customerName = ref("ZVJS");
+// 		const today = ref("stvrtok");
 		
-// 		return { customerName };
+// 		return { customerName, today };
 // 	},
 // })
 

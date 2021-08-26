@@ -10,10 +10,15 @@
   <div class="module-content">
 		<Home />
 	</div>
+
+  <div class="module-content">
+		<Settings />
+	</div>	
 </template>
 
 <script>
 import Home from "./components/Home";
+import Settings from "./components/Settings";
 
 export default {
   name: "App",
@@ -37,7 +42,8 @@ export default {
     };
   },
 	components: {
-		Home
+		Home,
+		Settings
 	}
 };
 </script>
