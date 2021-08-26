@@ -6,14 +6,25 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import { defineComponent } from '@vue/composition-api'
+export default {
+	name: "Home",
+	data() {
+		return {
+			customerName: "ZVJS",
+			today: "26.8.2021"
+		}
+	}
+}
 
-export default defineComponent({
-	setup() {
-		const customerName = ref("ZVJS");
+// import { ref } from "vue";
+// import { defineComponent } from '@vue/composition-api'
+
+// export default defineComponent({
+// 	setup() {
+// 		const customerName = ref("ZVJS");
 		
-		return { customerName };
-	},
-})
+// 		return { customerName };
+// 	},
+// })
+
 </script>

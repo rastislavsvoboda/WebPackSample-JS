@@ -8,12 +8,12 @@
 		</ul>
   </div>
   <div class="module-content">
-		<!-- <Home /> -->
+		<Home />
 	</div>
 </template>
 
 <script>
-// import Home from "@/components/Home";
+import Home from "./components/Home";
 
 export default {
   name: "App",
@@ -37,7 +37,7 @@ export default {
     };
   },
 	components: {
-		// Home
+		Home
 	}
 };
 </script>
