@@ -1,30 +1,37 @@
 <template>
-	<h1>Co to je?</h1>
+	<h1>Welcome</h1>
+	<!-- <router-link to="Settings">Settings</router-link> -->
   <div class="menu">
     <ul v-for="item in menuItems" :key="item.id">
 			<li>
+				<router-link :to="{name: item.link}">
 				{{item.name}}
+				</router-link>
 			</li>
 		</ul>
   </div>
-  <div class="module-content">
-		<Home />
-	</div>
-
-  <div class="module-content">
-		<Settings />
-	</div>	
+	<router-view />
 </template>
 
 <script>
-import Home from "./components/Home";
-import Settings from "./components/Settings";
 
 export default {
   name: "App",
   data() {
     return {
       menuItems: [
+        {
+          id: "home",
+          name: "Home",
+          icon: "",
+          link: "Home",
+        },
+        {
+          id: "settings",
+          name: "Settings",
+          icon: "",
+          link: "Settings",
+        },
         {
           id: "module-1",
           name: "Module1",
@@ -41,10 +48,10 @@ export default {
       text: "Vue works!",
     };
   },
-	components: {
-		Home,
-		Settings
-	}
+	// components: {
+	// 	Home,
+	// 	Settings
+	// }
 };
 </script>
 
