@@ -1,5 +1,7 @@
-const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin")
+// const { ModuleFederationPlugin } = require('webpack').container;
+const { VueLoaderPlugin } = require('vue-loader')
 const path = require('path')
 const webpack = require('webpack')
 
@@ -45,8 +47,20 @@ module.exports = {
     },  },
   plugins: [
     new VueLoaderPlugin(),
+    // new ModuleFederationPlugin({
+    //   name: "module1",
+    //   filename: "remoteEntry.js",
+    //   remotes: {},
+    //   exposes: {
+    //     // './App': './src/App.vue',
+    //     './Search': './src/components/Search.vue',
+    //     // './Taps': './src/components/Taps.vue',
+    //     // './store': './src/store.ts',
+    //   },
+    //   shared: require("./package.json").dependencies,
+    // }),
     new HtmlWebpackPlugin({
-      title: 'Set-Custom',
+      title: 'Module1',
       template: path.resolve(__dirname, 'public/index.html')
     }),
     new webpack.DefinePlugin({
